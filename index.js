@@ -12,19 +12,16 @@ const pic3Desc = document.getElementById('pic3-desc')
 async function getNews(){
 
 
-    const url = 'https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/stories/search?category=Announcements,News,News&page_size=20&page=2'
+    const url = 'https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/stories/search?category=Announcements,News&page_size=20&page=5'
     const corsProxyUrl = 'https://corsproxy.io/?'
     
 
     const response = await fetch( corsProxyUrl + url )
     const data = await response.json();
-    
+
     console.log(data)
+    
     data.stories.forEach(newsItem => {
-        console.log(newsItem);
-        console.log(newsItem.content);
-
-
 
         const newsCard = document.createElement('div')
         const picture = document.createElement('img')
@@ -39,6 +36,8 @@ async function getNews(){
         
         picture.src = mainPic
         desc.textContent = mainDesc
+
+        picture.style.width = '100%'
 
         picture.classList.add('news-image')
         desc.classList.add('descriptions2')
@@ -60,15 +59,19 @@ async function getNews(){
 async function getStory(){
 
 
-  const url = 'https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/stories/search?category=Announcements,News,News&page_size=1&page=1'
+  const url = 'https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/stories/search?category=Announcements,News&page_size=1&page=5'
   const corsProxyUrl = 'https://corsproxy.io/?'
 
 
   const response = await fetch( corsProxyUrl + url )
   const data = await response.json();
+
+
+  console.log(data)
+
   const mainPic = data.stories[0].content.thumbnail.filename
   const mainDesc = data.stories[0].content.headline
-
+  mainPicture.classList.add('mainpicture')
   mainPicture.src = mainPic
   Descs.textContent = mainDesc
   pic2.src = data.stories[1].content.thumbnail.filename

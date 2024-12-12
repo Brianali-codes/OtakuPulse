@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Otaku Pulse</title>
     <link rel="stylesheet" href="public/output.css">
-    <link rel="shortcut icon" href="public/assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="public/assets/o.png" type="image/x-icon">
     <link rel="stylesheet" href="public/style.css">
 </head>
 <body>
     
     <div class="h-16 bg-red-500 flex justify-between items-center p-5" id="NAVBAR">
         <div class="flex flex-row gap-2 justify-center items-center">
-            <img src="public/assets/logo.png" alt="Logo" class="w-9 rounded-full">
-            <p class="font-serif text-black font-bold">Otaku Pulse</p>
+            <img src="public/assets/o.png" alt="Logo" class="w-9 rounded-full">
+            <p class="descriptions text-black font-bold">Otaku Pulse</p>
         </div>
         
 
         <div class="buttonDiv flex flex-row">
-            <a href="#LP"><button>Home</button></a>
-            <a href="#main"><button>News</button></a>
-            <a href="https://github.com/brianali-codes" target="_blank"><button>Github</button></a>
+            <a href="#LP"><button class="descriptions">Home</button></a>
+            <a href="#main"><button class="descriptions">News</button></a>
+            <a href="https://github.com/brianali-codes" target="_blank"><button class="descriptions">Github</button></a>
         </div>
+
         
-        <img src="public/assets/MENU.png" alt="" id="MENU">
+        
+        <img src="public/assets/MENU.png" alt="" id="MENU" onclick="toggleNavbar()">
+        
         
     </div>
-
+    <div class="sidebar flex-col " id="SB">
+        <a href="#LP"><button class="descriptions text-xl" onclick="toggleNavbar()">Home</button></a>
+        <a href="#main"><button class="descriptions text-xl" onclick="toggleNavbar()">News</button></a>
+        <a href="https://github.com/brianali-codes " target="_blank"><button class="descriptions text-xl" onclick="toggleNavbar()">Github</button></a>
+    </div>
     <br><br><br>
 
     <div class="flex flex-row w-full" id="home">
@@ -75,8 +82,20 @@
     </div>
 
 <hr>
+    <br>
+    <div class="flex flex-row justify-between items-center p-5">
+        <div class="flex flex-row gap-2 justify-center items-center">
+            <img src="public/assets/o.png" alt="Logo" class="w-9 rounded-full">
+            <p class="descriptions text-black font-bold">Otaku Pulse</p>
+        </div>
+        <div>
+            <a href="https://buymeacoffee.com/bryce_codes"><img src="https://cdn.buymeacoffee.com/buttons/default-yellow.png" alt="" id="bmc"></a>
+        </div>
+    </div>
+
+
     <div>
-        <p class="text-center">All rights reserved 2024</p>
+        <p class="text-center descriptions">All rights reserved 2024</p>
     </div>
 
 

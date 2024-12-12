@@ -124,8 +124,18 @@ async function getStory() {
 
 }
 
-
-
-
 getNews()
 getStory()
+
+function toggleNavbar(){
+  const sidebar = document.getElementById('SB')
+
+  if(sidebar.style.display === 'none' || SB.style.display === ''){
+    SB.style.display ='flex'
+  }
+  else{
+    sidebar.style.display ='none'
+  }
+
+}
+

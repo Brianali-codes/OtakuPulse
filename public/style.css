@@ -93,6 +93,7 @@ html{
   width:100%;
   height: 100%;
   border-radius: 10px;
+  cursor: pointer;
 }
 #Titles{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -125,11 +126,22 @@ html{
   position: fixed;
   width: 100%;
 }
-
+#mainpic2{
+  width: 100%;
+}
 @media (max-width: 768px) {
     #main{
       display: flex;
       flex-direction: column;
+    }
+    .news-card2{
+      width: fit-content;
+    }
+    #home{
+      flex-direction: column;
+    }
+    #mainpic2{
+      width: 100%;
     }
     #LP{
       display: flex;
@@ -137,7 +149,7 @@ html{
     }
     #mainImage{
       width: 100%;
-      height: 50%;
+      height: 100%;
     }
     .buttonDiv{
       display: none;

@@ -30,7 +30,6 @@ async function getNews() {
   link2.href = `https://www.google.com/search?q=${encodeURIComponent(linkForPic2)}`;
   link1.target = '_blank'
   link2.target = '_blank'
-  console.log(data)
 
   function linkToNewTab(url) {
     window.open(url, '_blank');  // Opens the link in a new tab

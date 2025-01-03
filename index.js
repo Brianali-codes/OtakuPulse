@@ -23,21 +23,20 @@ async function getNews() {
 
 
 
-  linkForPic1 = data.stories[11].slug
-  linkForPic2 = data.stories[19].slug
+  linkForPic1 = data.stories[10].slug
+  linkForPic2 = data.stories[18].slug
 
   link1.href = `https://www.google.com/search?q=${encodeURIComponent(linkForPic1)}`;
   link2.href = `https://www.google.com/search?q=${encodeURIComponent(linkForPic2)}`;
   link1.target = '_blank'
   link2.target = '_blank'
-  console.log(data)
 
   function linkToNewTab(url) {
     window.open(url, '_blank');  // Opens the link in a new tab
   }
 
-  pic2.src = data.stories[11].content.thumbnail.filename
-  pic3.src = data.stories[19].content.thumbnail.filename
+  pic2.src = data.stories[10].content.thumbnail.filename
+  pic3.src = data.stories[18].content.thumbnail.filename
 
   pic2Desc.textContent = data.stories[1].content.headline
   pic3Desc.textContent = data.stories[2].content.headline

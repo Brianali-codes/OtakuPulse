@@ -38,8 +38,8 @@ async function getNews() {
   pic2.src = data.stories[10].content.thumbnail.filename
   pic3.src = data.stories[18].content.thumbnail.filename
 
-  pic2Desc.textContent = data.stories[1].content.headline
-  pic3Desc.textContent = data.stories[2].content.headline
+  pic2Desc.textContent = data.stories[10].content.headline
+  pic3Desc.textContent = data.stories[18].content.headline
 
   pic2.classList.add('news-image2')
   pic3.classList.add('news-image2')

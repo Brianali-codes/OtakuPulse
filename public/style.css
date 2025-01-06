@@ -4,6 +4,9 @@
 html{
   scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+  display: none; 
+}
 .buttonDiv button{
     width: 70px;
     color: black;

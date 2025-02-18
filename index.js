@@ -13,7 +13,7 @@ async function getNews() {
 
 
   const url = 'https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/stories/search?category=Announcements,News&page_size=20&page=5'
-  const corsProxyUrl = 'https://corsproxy.io/?'
+  const corsProxyUrl = 'https://api.codetabs.com/v1/proxy?quest='
 
 
   const response = await fetch(corsProxyUrl + url)
@@ -95,7 +95,7 @@ async function getStory() {
 
 
   const url = 'https://cr-news-api-service.prd.crunchyrollsvc.com/v1/en-US/stories/search?category=Announcements,News&page_size=1&page=5'
-  const corsProxyUrl = 'https://corsproxy.io/?'
+  const corsProxyUrl = 'https://api.codetabs.com/v1/proxy?quest='
 
   const response = await fetch(corsProxyUrl + url)
   const data = await response.json();
